@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px"> Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Oferta Mais</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Descrição</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cadastros</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span> Oferta Mais </span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b> Um novo conceito sobre inovação </b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>........................</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="https://th.bing.com/th/id/OIP.54uBn2uZtL4NtIMAy2EJqQHaE8?pid=ImgDet&rs=1" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+      <img src="https://th.bing.com/th/id/R.3a79766d3cabf00a42946a1439c8084b?rik=OJsQI1U7m8%2bNFw&riu=http%3a%2f%2fwww.projetoagua.org.br%2fupload%2ftextarea%2foriginal%2fimagem-projeto-agua-230.jpg&ehk=yWBx2oDx6DiQav6oiV0ZWPGZNXGqdEZv%2fbOUJSSmEIY%3d&risl=&pid=ImgRaw&r=0" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+     
+    </div>
+
+    <div class="w3-half">
+      <img src="https://th.bing.com/th/id/R.37c1f4a216f1ff916f0831bd65ae28a0?rik=yj905nt13BsF%2bg&pid=ImgRaw&r=0" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="https://th.bing.com/th/id/R.c82e72b74b932475fa8f6a69e77c210d?rik=yOvMqFK1ObdQPQ&pid=ImgRaw&r=0" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+    
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Descrição.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p> A ideia principal desse Website Oferta Mais, consiste em ser um espaço onde as pessoas vão encontrar mais agilidade e praticidade na hora de deslocarem-se de suas casas até o seu ambiente de trabalho.</p> 
+    <p> O site funciona da seguinte forma, determinada empresa, estabelecimento ou até mesmo instituições de ensino, vão aderir à essa plataforma com intuito de melhorar a comunicação e o relacionamento interpessoal dos seus funcionários, professores, alunos, etc. O intuito é "ofertar" caronas cobrando apenas uma taxa mínina para arcar com as despesas do combustível e consequentemente diminuir os impactos causados pela emissão de gases no meio ambiente. </p> 
+    <p> Ao aderirem à essa plataforma, as pessoas vão realizar um cadastro rápido e de forma segura, informando seus dados, se possui um veículo próprio ou não e qual é a sua disponibilidade de horários em determinado dia. Feito isso, o sistema automaticamente irá retornar quais são os veículos cadastrados mais próximos que atende você naquele exato momento e além disso, informar uma lista contento qual melhor rotatória naquele horário que tem menos trânsito. </p>
+    
+ 
+  </div>
+  
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b> Cadastros.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Informe aqui os seus dados:
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Nome:</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email:</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Telefone:</label>
+        <input class="w3-input w3-border" type="int" name="Telefone" required> </div>
+      <div>
+       <label>Possui veículo próprio?</label>
+        <input class="w3-input w3-border" type="text" name="Possuí veículo próprio?" required> </div>
+        <div class="w3-section">
+        <div>
+        <label> Possui disponibilidade de horário em qual dia e qual turno. Selecione no campo abaixo:</label>
+        <input class="w3-input w3-border" type="text" name="Possui disponibilidade de horário em qual dia e qual turno. Selecione no campo abaixo:" required> </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+      <li class="w3-dark-grey w3-xlarge w3-padding-23">Dias</li> <br > <br/> 
+       <li class="w3-padding-16"> Segunda </li> <br /> <br /> 
+       <li class="w3-padding-16"> Terça  </li> <br /> <br /> 
+       <li class="w3-padding-16"> Quarta </li> <br /> <br /> 
+       <li class="w3-padding-16"> Quinta </li> <br /> <br /> 
+       <li class="w3-padding-16"> Sexta  </li> <br /> <br />
+       <li class="w3-padding-16"> Sábado </li> <br /> 
+       
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-white w3-padding-large w3-hover-black"> Selecione um dia </button>
+        </li>
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-red w3-xlarge w3-padding-23"> Turnos </li>
+        <li class="w3-padding-16"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
+        <li class="w3-padding-16"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
+        <li class="w3-padding-16"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
+        <li class="w3-padding-16"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
+       <li class="w3-padding-16"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
+       <li class="w3-padding-16"> Matutino() <br /> Vespertino() <br /> Noturno() </li> <br />
+      
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-red w3-padding-large w3-hover-black">Selecione um turno</button> <br /> 
+        </li>
+      </ul>
+    </div> 
+   
+   </div> <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom"> Finalizar Cadastro</button>
+    </form>  
+  </div>
+
+
+
+ 
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right"> Alimentado por <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
