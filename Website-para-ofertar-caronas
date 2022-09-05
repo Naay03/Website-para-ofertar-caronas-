@@ -1,89 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
+body, h1,h2,h3,h4,h5,h6 {font-family: "Time new roman", sans-serif}
+.w3-row-padding img {margin-bottom: 08px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 100px; background:#000;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 110px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
 </style>
 </head>
-<body>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px"> Menu</a>
+<nav class="w3-sidebar w3-orange w3-collapse w3-top w3-large w3-padding" style="z-index:5;width:180px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:10%;font-size:20px"> Menu</a>
   <div class="w3-container">
-    <h3 class="w3-padding-64"><b>Oferta Mais</b></h3>
+    <h3 class="w3-padding-64"><b>Bem Vindo!</b></h3>
   </div>
   <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Descrição</a> 
-    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cadastros</a> 
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>PROJETO</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>LOCAIS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTATOS</p>
+  </a>
+    
   </div>
 </nav>
 
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-  <span> Oferta Mais </span>
-</header>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
-
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="showcase">
-    <h1 class="w3-jumbo"><b> Um novo conceito sobre inovação </b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>........................</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-light-grey w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">INÍCIO</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">SOBRE O PROJETO</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PLAFORMAS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">SUPORTE E FEEDBACK</a>
   </div>
-  
-  <!-- Photo grid (modal) -->
-  <div class="w3-row-padding">
-    <div class="w3-half">
-      <img src="https://th.bing.com/th/id/OIP.54uBn2uZtL4NtIMAy2EJqQHaE8?pid=ImgDet&rs=1" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
-      <img src="https://th.bing.com/th/id/R.3a79766d3cabf00a42946a1439c8084b?rik=OJsQI1U7m8%2bNFw&riu=http%3a%2f%2fwww.projetoagua.org.br%2fupload%2ftextarea%2foriginal%2fimagem-projeto-agua-230.jpg&ehk=yWBx2oDx6DiQav6oiV0ZWPGZNXGqdEZv%2fbOUJSSmEIY%3d&risl=&pid=ImgRaw&r=0" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
-     
-    </div>
+</div>
 
-    <div class="w3-half">
-      <img src="https://th.bing.com/th/id/R.37c1f4a216f1ff916f0831bd65ae28a0?rik=yj905nt13BsF%2bg&pid=ImgRaw&r=0" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
-      <img src="https://th.bing.com/th/id/R.c82e72b74b932475fa8f6a69e77c210d?rik=yOvMqFK1ObdQPQ&pid=ImgRaw&r=0" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
-    
-  </div>
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center" id="home">
+    <h1 style=width:100% class="w3-jumbo"><span class="w3-hide-small">CARONAS</span> CONVENIENTES </h1>
+    <p>Um novo jeito para facilitar a sua locomoção até o seu local desejado e a preservar o meio ambiente!</p>
+    <img src="https://static2.bigstockphoto.com/2/8/3/large1500/382843277.jpg" alt="boy" class="w3-image" width="600" height="900">
+  </header>
 
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
-  </div>
-
-  <!-- Services -->
-  <div class="w3-container" id="services" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Descrição.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p> A ideia principal desse Website Oferta Mais, consiste em ser um espaço onde as pessoas vão encontrar mais agilidade e praticidade na hora de deslocarem-se de suas casas até o seu ambiente de trabalho.</p> 
-    <p> O site funciona da seguinte forma, determinada empresa, estabelecimento ou até mesmo instituições de ensino, vão aderir à essa plataforma com intuito de melhorar a comunicação e o relacionamento interpessoal dos seus funcionários, professores, alunos, etc. O intuito é "ofertar" caronas cobrando apenas uma taxa mínina para arcar com as despesas do combustível e consequentemente diminuir os impactos causados pela emissão de gases no meio ambiente. </p> 
-    <p> Ao aderirem à essa plataforma, as pessoas vão realizar um cadastro rápido e de forma segura, informando seus dados, se possui um veículo próprio ou não e qual é a sua disponibilidade de horários em determinado dia. Feito isso, o sistema automaticamente irá retornar quais são os veículos cadastrados mais próximos que atende você naquele exato momento e além disso, informar uma lista contento qual melhor rotatória naquele horário que tem menos trânsito. </p>
-    
  
-  </div>
-  
-  <!-- Designers -->
-  <div class="w3-container" id="designers" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b> Cadastros.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-black w3-padding-64" id="about">
+    <button class="w3-button w3-orange w3-padding-large w3-section">
+      <h2> APRESENTAÇÂO </h2>
+    </button>
+    <hr style="width:400px" class="w3-opacity">
+    <p> É notavél o quanto precisamos de mais praticidade e agilidade na hora de deslocarmos de nossas casas até determinando local, seja para o trabalho, estudos e até mesmo para o lazer é viável ter essa praticidade. 
+      Em decorrência disso, foi criado o Caronas Convinientes, uma plataforma onde as pessoas vão encontar tudo isso e um pouco mais. 
+
+      </br></br>
+      A ideia central é melhorar o relacionamento interpessoal das pessoas, uma vez que tais caronas serão ofertadas por pessoas que frequetam determinado estabelecimento ou 
+      trabalham em determinada empresa. E consequetemente ajudar na redução dos imapctos causados no meio ambiente,
+      uma vez que, ao ofertar essas caronas, teremos menos veículos circulando pelas ruas e será diminuido a emissão dos 
+      gases poluentes. 
+
+      </br></br>
+      Funcionamento 
+     </br></br>
+      Escolha da cidade e do ponto onde melhor lhe atender;</br></br> 
+      A inserção dos dados para realização do cadastro;</br></br>
+      A escolha do dia e do horário desejado e finalização do cadastro. 
+
+    </p>
+
+        <!-- ABAS -->
+        </br></br></br>
+    <button class="w3-button w3-orange w3-padding-large w3-section">
+      <h2> LOCAIS </h2>
+    </button>
+    <p> 
+      
+    </p>
+    </br>
+    <p class="w3-wide"> ARAÇUAÍ </p> 
+    <header class="w3-container w3-padding-32 w3-center" id="home">
+    <img src="https://drd.com.br/wp-content/uploads/2021/06/aracuai.jpg" alt="boy" class="w3-image" width="600" height="900">
+  </header>
+    <div class="w3-grey">
+      <div class="w3-orange" style="height:28px;width:100%"></div>
+    </div>
+    <p class="w3-wide">Praça das Rosas </p>
+    <p class="w3-wide">Moto Mais</p>
+    <p class="w3-wide">Eletrozema</p>
+    <p class="w3-wide">Posto Cristal</p>
+    <p class="w3-wide">Praça da Matriz</p>
+    <p class="w3-wide">Decor Móveis</p>
+    <p class="w3-wide">Praça do Fórum</p>
+    
+    <div class="w3-grey">
+      <div class="w3-orange" style="height:28px;width:100%"></div>
+    </div> 
+
+    <p class="w3-wide">VIRGEM DA LAPA</p>
+    <header class="w3-container w3-padding-32 w3-center" id="home">
+    <img src="https://th.bing.com/th/id/R.52c41c20b86e98b8c5229003655ccfa2?rik=DqsQ4MYmnzpsVw&riu=http%3a%2f%2fwww.kiaunoticias.com%2fwp-content%2fuploads%2f2018%2f08%2f37524819.jpg&ehk=l%2bv237HdCd9k19Kq%2fyTtLoAw0wKESKd41GSjJ1dKxPE%3d&risl=&pid=ImgRaw&r=0" alt="boy" class="w3-image" width="600" height="600">
+  </header>
+    <div class="w3-grey">
+      <div class="w3-orange" style="height:28px;width:100%"></div>
+    </div>  
+    <p class="w3-wide">Pizzaria e Lanchonete do Gê</p>
+    <p class="w3-wide">Padaria Pão e Vinho</p>
+    <p class="w3-wide">Igreja Nossa Senhora Da Lapa</p>
+    <p class="w3-wide">Sorvete Amigo</p>
+    <p class="w3-wide">Gula Gelada</p>
+    <p class="w3-wide">Açougue do Neném</p>
+    <br>
+
+    <div class="w3-grey">
+      <div class="w3-orange" style="height:28px;width:100%"></div>
+    </div> 
+
+    <p class="w3-wide">BERILO</p>
+    <header class="w3-container w3-padding-32 w3-center" id="home">
+    <img src="https://www.ferias.tur.br/imgs/2759/berilo/g_praca-be.jpg" alt="boy" class="w3-image" width="600" height="900">
+  </header>
+    <div class="w3-grey">
+      <div class="w3-orange" style="height:28px;width:100%"></div>
+    </div>  
+    <p class="w3-wide">Praça Doutor Antônio Carlos</p>
+    <p class="w3-wide">Silvano Eletrodomesticos</p>
+    <p class="w3-wide">Sueli Calçados</p>
+    <p class="w3-wide">Sorveteria Querolce</p>
+    <p class="w3-wide">Emplacar Berilo</p>
+    <p class="w3-wide">Mercado Municipal</p>
+    <br>
+
+
+    <div class="w3-grey">
+      <div class="w3-orange" style="height:28px;width:100%"></div>
+    </div>
+    <p class="w3-wide">LELIVÉLDIA</p>
+    <header class="w3-container w3-padding-32 w3-center" id="home">
+    <img src="https://th.bing.com/th/id/R.6a450189d324ac69064cdb1b663ef13a?rik=5Sm9XZ4mMryCCw&riu=http%3a%2f%2fwww.kiaunoticias.com%2fwp-content%2fuploads%2f2017%2f10%2fleliveldia-604x270.jpg&ehk=6P98uNcCmygw8g4GyyCmGOiPfAzt0%2fmmE4bItWB8nhA%3d&risl=&pid=ImgRaw&r=0" alt="boy" class="w3-image" width="600" height="900">
+  </header>
+    <div class="w3-grey">
+      <div class="w3-orange" style="height:28px;width:100%"></div>
+    </div>  
+    <p class="w3-wide">Bar do Zé Machado</p>
+    <p class="w3-wide">Noel Cabeleleiro</p>
+    <p class="w3-wide">Escola Estadual</p>
+    <p class="w3-wide">Supermercado Teixeira Coelho</p>
+    <p class="w3-wide">Restaurante da Nide</p>
+    <p class="w3-wide">Lanchonete do Cachoeira</p>
+    <br>
+    
+    <div class="w3-grey">
+      <div class="w3-orange" style="height:28px;width:100%"></div>
+    </div>
+    <p class="w3-wide">FRANSCICO BADARÓ</p>
+    <header class="w3-container w3-padding-32 w3-center" id="home">
+    <img src="https://static.consolidesuamarca.com.br/data/images/francisco-badaro-mg.jpg?18092019" alt="boy" class="w3-image" width="600" height="600">
+  </header>
+    <div class="w3-grey">
+      <div class="w3-orange" style="height:28px;width:100%"></div>
+    </div>  
+    <p class="w3-wide">Lanchonete Recanto</p>
+    <p class="w3-wide">Sorveteria Amigp</p>
+    <p class="w3-wide">Mercearia Dois irmãos</p>
+    <p class="w3-wide">WF Confeccções</p>
+    <p class="w3-wide">Dair Cabeleleiro</p>
+    <p class="w3-wide">Drogaria Nossa Senhora De Fátima</p>
+    <br>
+
+
+<!-- Grid for pricing tables -->
+<div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-orange"><b> Cadastros.</b></h1>
     <p>Informe aqui os seus dados:
     <form action="/action_page.php" target="_blank">
       <div class="w3-section">
@@ -104,75 +213,108 @@ body {font-size:16px;}
         <div>
         <label> Possui disponibilidade de horário em qual dia e qual turno. Selecione no campo abaixo:</label>
         <input class="w3-input w3-border" type="text" name="Possui disponibilidade de horário em qual dia e qual turno. Selecione no campo abaixo:" required> </div>
-  </div>
+        </div>
 
-  <div class="w3-row-padding">
-    <div class="w3-half w3-margin-bottom">
-      <ul class="w3-ul w3-light-grey w3-center">
-      <li class="w3-dark-grey w3-xlarge w3-padding-23">Dias</li> <br > <br/> 
-       <li class="w3-padding-16"> Segunda </li> <br /> <br /> 
-       <li class="w3-padding-16"> Terça  </li> <br /> <br /> 
-       <li class="w3-padding-16"> Quarta </li> <br /> <br /> 
-       <li class="w3-padding-16"> Quinta </li> <br /> <br /> 
-       <li class="w3-padding-16"> Sexta  </li> <br /> <br />
-       <li class="w3-padding-16"> Sábado </li> <br /> 
+        </br> </br>
+        <div class="w3-row-padding">
+        <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-grey w3-center">
+        <li class="w3-orange w3-xlarge w3-padding-23">Dias</li> </br> <br> 
+        <li class="w3-padding-12"> Segunda [ ] </li> <br /> <br /> 
+        <li class="w3-padding-12"> Terça [ ]  </li> <br /> <br /> 
+        <li class="w3-padding-12"> Quarta [ ]</li> <br /> <br /> 
+        <li class="w3-padding-12"> Quinta [ ] </li> <br /> <br /> 
+        <li class="w3-padding-12"> Sexta [ ] </li> <br /> <br />
+        <li class="w3-padding-12"> Sábado [ ] </li> <br /> 
+        <li class="w3-orange w3-padding-24">
+          <button class="w3-button w3-orange w3-padding-large w3-orange"> Selecione um dia </button>
+        </li>
+        </ul>
+        </div>
+        <div class="w3-half">
+        <ul class="w3-ul w3-grey w3-center">
+          <li class="w3-orange w3-xlarge w3-padding-23"> Turnos </li>
+          <li class="w3-padding-12"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
+          <li class="w3-padding-12"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
+          <li class="w3-padding-12"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
+          <li class="w3-padding-12"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
+        <li class="w3-padding-12"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
+        <li class="w3-padding-12"> Matutino() <br /> Vespertino() <br /> Noturno() </li> <br />
+        <li class="w3-orange w3-padding-24">
+          <button class="w3-button w3-orange w3-padding-large w3-orange">Selecione um turno</button> <br /> 
+        </li>
+        </ul>
+        </div> 
+        </div> <button type="submit" class="w3-button w3-block w3-padding-large w3-orange w3-margin-bottom"> Finalizar Cadastro</button>
+          </form>  
+        </div>
        
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-white w3-padding-large w3-hover-black"> Selecione um dia </button>
-        </li>
-      </ul>
-    </div>
-        
-    <div class="w3-half">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-red w3-xlarge w3-padding-23"> Turnos </li>
-        <li class="w3-padding-16"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
-        <li class="w3-padding-16"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
-        <li class="w3-padding-16"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
-        <li class="w3-padding-16"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
-       <li class="w3-padding-16"> Matutino() <br /> Vespertino() <br /> Noturno() </li>
-       <li class="w3-padding-16"> Matutino() <br /> Vespertino() <br /> Noturno() </li> <br />
-      
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-red w3-padding-large w3-hover-black">Selecione um turno</button> <br /> 
-        </li>
-      </ul>
-    </div> 
-   
-   </div> <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom"> Finalizar Cadastro</button>
-    </form>  
+
+        <div> Pessoas Disponíveis</div>
+        <div>Vitória Ferreira Gomes, Araçuaí, Disponível no turno da manhã (Praça das Rosas).</div>
+        <div>Lucas Almeida Campos, Araçuaí, Disponível no turno da manhã (Posto Crsital).</div>
+        <div>Marcos Vinícius, Araçuaí, Disponível no turno da manhã (Praça do Fórum).</div>
+
+
+
+
+    <!-- Testimonials -->
+    <h3 class="w3-padding-24 w3-text-black">Apoiadores</h3> 
+    <img src="https://static.wixstatic.com/media/5921bf_51541e02827d49d0a73eb284f98946c6~mv2.png/v1/fill/w_675,h_182,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5921bf_51541e02827d49d0a73eb284f98946c6~mv2.png" 
+    alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:100px">
+    <p><span class="w3-large w3-margin-right"> INSTITUTO PARA TODO MUNDO</span> ONG </p>
+    <P> Endereço:
+
+Av. Nossa Sra. dos Pobres, 02 - Lelivéldia, Berilo - Minas Gerais
+
+CEP: 39640-000. </p>
+  <!-- End About Section -->
+  </div>
+  <!-- End Portfolio Section -->
   </div>
 
+  <!-- Contact Section -->
+  <div class="w3-padding-40 w3-content w3-text-grey" id="contact">
+    <button class="w3-button w3-orange w3-padding-large w3-section">
+      <h2> CONTATOS E AVALIAÇÕES </h2>
+    </button>
+    <hr style="width:150px" class="w3-opacity">
 
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Minas Gerais, BR </p>
+      <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Telefone: (33) 999602034 </p>
+      <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i> Email: santosnaiane2003@gmail.com </p>
+    </div><br>
+    <p>Envie uma mensagem, avalie nosso projeto: </p>
 
- 
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Nome" required name="Nome"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Assunto" required name="Assunto"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Mensagem" required name="Mensagem"></p>
+      <p>
+        <button class="w3-button w3-orange w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> ENVIAR
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-orange">w3.css</a></p>
+  <!-- End footer -->
+  </footer>
 
-<!-- End page content -->
+<!-- END PAGE CONTENT -->
 </div>
-
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right"> Alimentado por <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
-
-<script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-</script>
 
 </body>
 </html>
